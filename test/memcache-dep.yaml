@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: memcached
-        image: memcached:1.5.15
+        image: memcached:1-alpine
         imagePullPolicy: IfNotPresent
         args:
         - -m 256   # Maximum memory to use, in megabytes
