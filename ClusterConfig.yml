@@ -1,0 +1,26 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: devz
+  region: eu-central-1
+
+nodeGroups:
+  - name: ng-workers
+    labels: { role: workers }
+    minSize: 1
+    maxSize: 5
+    instancesDistribution:
+      maxPrice: 0.037
+      instanceTypes: ["t3.small", "t3.medium"] # At least two instance types should be specified
+      onDemandBaseCapacity: 2
+      onDemandPercentageAboveBaseCapacity: 50
+      spotInstancePools: 5
+    iam:
+      withAddonPolicies:
+        albIngress: true
+        autoScaler: true
+        cloudWatch: true
+    ssh: # import inline public key
+      # publicKeyName: devops
+      allow: true
