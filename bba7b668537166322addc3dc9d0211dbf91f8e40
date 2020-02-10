@@ -1,0 +1,1 @@
+{"jobID":"ff94a19a-e847-c5b0-1983-d099ac6a4341","spec":{"type":"policy","cause":{"Message":"","User":"Maxim Kruglov \u003cmaxim.kruglov@all.me\u003e"},"spec":{"test:deployment/memcached":{"add":{"automated":"true"},"remove":{}}}},"result":null}
