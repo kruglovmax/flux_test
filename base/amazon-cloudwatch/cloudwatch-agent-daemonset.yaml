@@ -4,6 +4,8 @@ kind: DaemonSet
 metadata:
   name: cloudwatch-agent
   namespace: amazon-cloudwatch
+  annotations:
+    fluxcd.io/automated: "true"
 spec:
   selector:
     matchLabels:

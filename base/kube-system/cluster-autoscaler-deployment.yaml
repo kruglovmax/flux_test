@@ -6,6 +6,8 @@ metadata:
   namespace: kube-system
   labels:
     app: cluster-autoscaler
+  annotations:
+    fluxcd.io/automated: "true"
 spec:
   replicas: 1
   selector:

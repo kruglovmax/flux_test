@@ -19,3 +19,5 @@ kind: ConfigMap
 metadata:
   name: cwagentconfig
   namespace: amazon-cloudwatch
+  annotations:
+    fluxcd.io/automated: "true"

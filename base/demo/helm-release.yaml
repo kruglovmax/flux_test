@@ -3,6 +3,8 @@ kind: HelmRelease
 metadata:
   name: podinfo
   namespace: demo
+  annotations:
+    fluxcd.io/automated: "true"
 spec:
   releaseName: podinfo
   chart:

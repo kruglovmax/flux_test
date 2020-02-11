@@ -18,3 +18,5 @@ kind: ConfigMap
 metadata:
   name: cluster-info
   namespace: amazon-cloudwatch
+  annotations:
+    fluxcd.io/automated: "true"

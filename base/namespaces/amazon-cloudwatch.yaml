@@ -4,4 +4,6 @@ kind: Namespace
 metadata:
   labels:
     name: amazon-cloudwatch
+  annotations:
+    fluxcd.io/automated: "true"
   name: amazon-cloudwatch

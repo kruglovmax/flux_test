@@ -6,6 +6,8 @@ metadata:
   namespace: amazon-cloudwatch
   labels:
     k8s-app: fluentd-cloudwatch
+  annotations:
+    fluxcd.io/automated: "true"
 data:
   fluent.conf: |
     @include containers.conf

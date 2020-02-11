@@ -4,4 +4,6 @@ kind: Namespace
 metadata:
   labels:
     name: monitoring
+  annotations:
+    fluxcd.io/automated: "true"
   name: monitoring
