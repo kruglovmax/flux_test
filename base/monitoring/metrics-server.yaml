@@ -7,6 +7,7 @@ metadata:
   annotations:
     fluxcd.io/automated: "true"
 spec:
+  helmVersion: v3
   releaseName: metrics-server
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
