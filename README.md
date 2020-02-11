@@ -1,3 +1,4 @@
+```
 eksctl create cluster -f ClusterConfig.yml
 
 EKSCTL_EXPERIMENTAL=true eksctl \
@@ -7,7 +8,6 @@ EKSCTL_EXPERIMENTAL=true eksctl \
     --git-email=fluxcd@all.me \
     --git-user=fluxcd \
     --namespace=flux --
-
 
 EKSCTL_EXPERIMENTAL=true eksctl \
     -f ClusterConfig.yml \
@@ -24,3 +24,4 @@ EKSCTL_EXPERIMENTAL=true eksctl \
     --git-user=fluxcd \
     -f ClusterConfig.yml \
     app-dev
+```
