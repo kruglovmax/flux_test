@@ -25,16 +25,16 @@ nodeGroups:
       # publicKeyName: devops
       allow: true
 
-fargateProfiles:
-  - name: fp-jobs
-    selectors:
-      # All workloads in the "jobs" Kubernetes namespace will be
-      # scheduled onto Fargate:
-      - namespace: jobs
-  - name: fp-dev
-    selectors:
-      # All workloads in the "dev" Kubernetes namespace matching the following
-      # label selectors will be scheduled onto Fargate:
-      - namespace: dev
-        labels:
-          env: fargate
+# fargateProfiles:
+#   - name: fp-jobs
+#     selectors:
+#       # All workloads in the "jobs" Kubernetes namespace will be
+#       # scheduled onto Fargate:
+#       - namespace: jobs
+#   - name: fp-dev
+#     selectors:
+#       # All workloads in the "dev" Kubernetes namespace matching the following
+#       # label selectors will be scheduled onto Fargate:
+#       - namespace: dev
+#         labels:
+#           env: fargate
