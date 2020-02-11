@@ -2,7 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: podinfo
-  namespace: demo
+  namespace: test
   annotations:
     fluxcd.io/automated: "true"
 spec:
@@ -12,3 +12,12 @@ spec:
     git: https://github.com/stefanprodan/podinfo
     ref: v3.x
     path: charts/podinfo
+  values:
+    service:
+      enabled: true
+      type: NodePort
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: alb
+        alb.ingress.kubernetes.io/scheme: internet-facing

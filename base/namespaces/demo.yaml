@@ -1,9 +1,0 @@
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  labels:
-    name: demo
-  annotations:
-    fluxcd.io/automated: "true"
-  name: demo
