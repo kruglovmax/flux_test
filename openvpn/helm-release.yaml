@@ -10,7 +10,6 @@ spec:
   releaseName: openvpn
   chart:
     git: https://github.com/helm/charts
-    ref: v4.x
     path: stable/openvpn
   values:
     replicaCount: 2
