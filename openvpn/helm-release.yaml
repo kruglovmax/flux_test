@@ -1,0 +1,24 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: openvpn
+  namespace: openvpn
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: openvpn
+  chart:
+    git: https://github.com/helm/charts
+    ref: v4.2.x
+    path: stable/openvpn
+  values:
+    replicaCount: 2
+    service:
+      annotations:
+        kubernetes.io/ingress.class: alb
+        alb.ingress.kubernetes.io/scheme: internet-facing
+    persistence:
+      enabled: false
+    openvpn:
+      useCrl: false
+      keystoreSecret: openvpn-keystore-secret
