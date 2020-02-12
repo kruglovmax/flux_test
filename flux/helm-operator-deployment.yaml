@@ -108,7 +108,6 @@ spec:
             readOnly: true
 
         args:
-        - --enabled-helm-versions=v3
         # How to find Tiller
         - --tiller-namespace=flux
         # TLS configuration
